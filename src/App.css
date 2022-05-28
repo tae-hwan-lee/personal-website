@@ -1,38 +1,368 @@
-.App {
-  text-align: center;
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+HTML5 display-role reset for older browsers article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+
+.bg-main{
+	background-color: rgb(233, 239, 247);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+	font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#TL{
+	width: max(2.5vw, 2.5vh);
+	height: max(2.5vw, 2.5vh);
+	animation: fade-in-down 2s 1 0.4s forwards;
+	opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-container{
+	padding-right: 50px;
+	padding-left: 50px;
+	font-size: max(2vw, 2vh);
 }
 
-.App-link {
-  color: #61dafb;
+.navs{
+	padding-right: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nav-about{
+	animation: fade-in-down 2s 1 0.2s backwards;
+}
+#nav-projects{
+	animation: fade-in-down 2s 1 0.4s backwards;
+}
+#nav-contact{
+	animation: fade-in-down 2s 1 0.6s backwards;
+}
+
+@keyframes fade-in-down {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+  
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+
+
+.intro{
+	margin: 0 auto;
+	padding: 35vh 0;
+	width: 60vw;
+	color: rgb(60, 59, 65);
+	animation: fade-in-left 2s 1 0.4s backwards;
+}
+
+
+@keyframes fade-in-left {
+	from {
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+  
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in-right {
+	from {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+  
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+#name{
+	font-size: max(5vw, 5vh);
+	color: black;
+}
+
+#hi-my-name{
+	font-size: max(2vw, 2vh);
+	margin-bottom: 2vh;
+}
+
+#i-am-a{
+	font-size: max(2vw, 2vh);
+	margin-top: 2vh;
+}
+
+#logos{
+	position: fixed;
+	right: 2vw;
+	bottom: 2vw;
+	display: flex;
+	gap: 1vw;
+	/* animation: fade-in 2s 1 0.6s backwards; */
+}
+
+#linked-in{
+	animation: fade-in-down 2s 1 0.2s backwards;
+}
+#github{
+	animation: fade-in-down 2s 1 0.4s backwards;
+}
+#mail{
+	animation: fade-in-down 2s 1 0.6s backwards;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+  
+	to {
+		opacity: 1;
+	}
+}
+
+.logos{
+	width: max(4vw, 4vh);
+	height: auto;
+}
+
+.section-header{
+	font-size: 52px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 5vh;
+}
+
+.about-bg{
+	background-color: rgb(220, 222, 229);
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+.about-container{
+	margin: 0 auto;
+	width: clamp(700px, 75vw, 1500px);
+}
+
+.about-sections{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.about-description{
+	grid-column: span 12;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3vh;
+}
+
+.about-archie{
+	width: 250px;
+}
+
+.about-me{
+	font-size: 18px;
+	list-style-type: none;
+}
+
+li.about-me-item:not(:last-child) { 
+	margin-bottom: 5px;  
+ }
+
+.about-skills{
+	grid-column: span 12;
+}
+
+.about-skills-list{
+	font-size: 24px;
+	list-style-type: none;
+	line-height: 3;
+}
+
+.skills-logos{
+	width: 50px;
+	height: 50px;
+}
+
+
+/* projects section */
+
+.projects-bg{
+	background-color: rgb(255, 255, 255);
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+.projects-container{
+	margin: 0 auto;
+	width: clamp(700px, 60vw, 1500px);
+	display: flex;
+	flex-direction: column;
+	gap: 5vh;
+}
+
+.projects-images{
+	width: clamp(300px, 25vw, 600px);
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border: 2px solid rgb(219, 219, 219);
+	border-radius: 10px;
+	transition: transform 1s 0s; 
+}
+
+.projects-images:hover {
+	transform: scale(1.05);
+}
+
+.projects-description{
+	color: rgb(87, 87, 87);
+	font-size: 18px;
+}
+
+.project-section{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.project-image-right{
+	grid-column: 12;
+}
+
+.project-description-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	grid-column: 3 / span 11;
+}
+
+.project-description-left{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	grid-column: span 11;
+}
+
+.contact-bg{
+	background-color: rgb(220, 222, 229);
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+.contact-header{
+	font-size: 36px; 
+}
+
+.contact-container{
+	margin: 0 auto;
+	width: clamp(700px, 60vw, 1500px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-information{
+	font-size: 16px;
+	margin-bottom: 1vh;
+}
+
+
+.footer{
+	display: flex;
+	justify-content: center;
+	font-size: 12px;
+	padding: 5vh 0;
+}
+
+
+
+@media(max-width: 800px){
+	.about-container{
+		width: clamp(300px, 75vw, 700px);
+	}
+
+	.about-sections{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.projects-container{
+		width: clamp(300px, 75vw, 700px);
+	}
+
+	.project-section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#reorder-a{
+		order: 4;
+	}
+
+	.contact-container{
+		width: clamp(300px, 75vw, 700px);
+	}
+
+}
+
+
+@media(min-width: 800px){
+	.about-sections{
+		grid-template-columns: repeat(12, 1fr);
+	}
+	.about-description{
+		grid-column: 1 / 8;
+	}
+	.about-skills{
+		grid-column: 9 / 13;
+	}
 }
