@@ -1,6 +1,6 @@
 import React from 'react';
-import memoryCardImg from '../images/projects/projects-memory-card.png';
-import etchSketchImg from '../images/projects/projects-etch-a-sketch.png';
+import memoryCardImg from '../images/projects/memory-card.png';
+import etchSketchImg from '../images/projects/etch-a-sketch.png';
 import bopify from '../images/projects/projects-bopify.png';
 
 const Projects = () => {
@@ -47,7 +47,7 @@ const Projects = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/otaeotay/TOP-memory-card-game"
+              href="https://github.com/otaeotay/memory-card-game"
             >
               View on github
             </a>
@@ -55,7 +55,7 @@ const Projects = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://otaeotay.github.io/TOP-memory-card-game/"
+            href="https://otaeotay.github.io/memory-card-game/"
           >
             <img
               src={memoryCardImg}
@@ -68,7 +68,7 @@ const Projects = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://otaeotay.github.io/TOP-etch-a-sketch/"
+            href="https://otaeotay.github.io/etch-a-sketch/"
           >
             <img
               src={etchSketchImg}
@@ -84,7 +84,7 @@ const Projects = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/otaeotay/TOP-etch-a-sketch"
+              href="https://github.com/otaeotay/etch-a-sketch"
             >
               View on github
             </a>
