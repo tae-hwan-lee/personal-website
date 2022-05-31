@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.6539eeeb.css",
-    "main.js": "/static/js/main.3ab62160.js",
+    "main.js": "/static/js/main.0011e507.js",
     "static/media/meNarchie.JPG": "/static/media/meNarchie.9293b312b45eb7355712.JPG",
     "static/media/projects-bopify.png": "/static/media/projects-bopify.206a2e7f9e6d0797a7cb.png",
     "static/media/mongodb.png": "/static/media/mongodb.f24d605b51b642c8b8c5.png",
-    "static/media/projects-etch-a-sketch.png": "/static/media/projects-etch-a-sketch.373cc8c16a559f6cfe44.png",
-    "static/media/projects-memory-card.png": "/static/media/projects-memory-card.e1aea399590e6becf35c.png",
+    "static/media/etch-a-sketch.png": "/static/media/etch-a-sketch.ffb1c431c08bd4391e1c.png",
+    "static/media/memory-card.png": "/static/media/memory-card.f82567c53c971b897fe0.png",
     "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
     "static/media/nodejs.svg": "/static/media/nodejs.615ffbea9529ca7047ed8a912bfd94b2.svg",
     "index.html": "/index.html",
@@ -19,10 +19,10 @@
     "static/media/linkedin.svg": "/static/media/linkedin.e012f6dcb57adea9a683ce62a3ee7eb7.svg",
     "static/media/mail.svg": "/static/media/mail.5e097adbeb603619e1dd96e60e8ed1ff.svg",
     "main.6539eeeb.css.map": "/static/css/main.6539eeeb.css.map",
-    "main.3ab62160.js.map": "/static/js/main.3ab62160.js.map"
+    "main.0011e507.js.map": "/static/js/main.0011e507.js.map"
   },
   "entrypoints": [
     "static/css/main.6539eeeb.css",
-    "static/js/main.3ab62160.js"
+    "static/js/main.0011e507.js"
   ]
 }
