@@ -1,4 +1,5 @@
 import React from 'react';
+import bubbleImg from '../images/projects/projects-bubble.png';
 import memoryCardImg from '../images/projects/memory-card.png';
 import etchSketchImg from '../images/projects/etch-a-sketch.png';
 import bopify from '../images/projects/projects-bopify.png';
@@ -17,7 +18,7 @@ const Projects = () => {
             <img src={bopify} alt="Bopify" className="projects-images"></img>
           </a>
           <div className="project-description-right">
-            <div style={{ fontSize: 36 }}>Bopify</div>
+            <div className="project-titles">Bopify</div>
             <div style={{ fontSize: 24 }} className="projects-description">
               Built with React, Node, Express
             </div>
@@ -35,8 +36,8 @@ const Projects = () => {
           </div>
         </div>
         <div className="project-section">
-          <div className="project-description-left">
-            <div style={{ fontSize: 36 }}>Memory Card Game</div>
+          <div className="project-description-left" id="reorder-a">
+            <div className="project-titles">Memory Card Game</div>
             <div style={{ fontSize: 24 }} className="projects-description">
               Built with React
             </div>
@@ -76,8 +77,8 @@ const Projects = () => {
               className="projects-images"
             ></img>
           </a>
-          <div className="project-description-right" id="reorder-a">
-            <div style={{ fontSize: 36 }}>Etch-a-Sketch</div>
+          <div className="project-description-right">
+            <div className="project-titles">Etch-a-Sketch</div>
             <div className="projects-description">
               Create pixel art with this online sketch board
             </div>
@@ -89,6 +90,35 @@ const Projects = () => {
               View on github
             </a>
           </div>
+        </div>
+        <div className="project-section">
+          <div className="project-description-left" id="reorder-a">
+            <div className="project-titles">Bubble - Pomodoro Timer</div>
+            <div style={{ fontSize: 24 }} className="projects-description">
+              Built with HTML, CSS, JavaScript
+            </div>
+            <div className="projects-description">
+              A Chrome extension that helps users stay productive
+            </div>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/otaeotay/bubble-pomodoro-chrome-extension"
+            >
+              View on github
+            </a>
+          </div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://chrome.google.com/webstore/detail/bubble/gpphafnehpfmkmoippnipakfeabjcfga"
+          >
+            <img
+              src={bubbleImg}
+              alt="Bubble Pomodoro"
+              className="projects-images project-image-right"
+            ></img>
+          </a>
         </div>
       </div>
     </div>
