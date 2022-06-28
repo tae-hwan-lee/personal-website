@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.d86d6d02.css",
-    "main.js": "/static/js/main.63a974fe.js",
+    "main.js": "/static/js/main.e3d85c81.js",
     "static/media/meNarchie.JPG": "/static/media/meNarchie.9293b312b45eb7355712.JPG",
     "static/media/projects-bopify.png": "/static/media/projects-bopify.206a2e7f9e6d0797a7cb.png",
+    "static/media/projects-bubble.png": "/static/media/projects-bubble.9b664991978b104701b2.png",
     "static/media/mongodb.png": "/static/media/mongodb.f24d605b51b642c8b8c5.png",
     "static/media/etch-a-sketch.png": "/static/media/etch-a-sketch.ffb1c431c08bd4391e1c.png",
     "static/media/memory-card.png": "/static/media/memory-card.f82567c53c971b897fe0.png",
@@ -19,10 +20,10 @@
     "static/media/linkedin.svg": "/static/media/linkedin.e012f6dcb57adea9a683ce62a3ee7eb7.svg",
     "static/media/mail.svg": "/static/media/mail.5e097adbeb603619e1dd96e60e8ed1ff.svg",
     "main.d86d6d02.css.map": "/static/css/main.d86d6d02.css.map",
-    "main.63a974fe.js.map": "/static/js/main.63a974fe.js.map"
+    "main.e3d85c81.js.map": "/static/js/main.e3d85c81.js.map"
   },
   "entrypoints": [
     "static/css/main.d86d6d02.css",
-    "static/js/main.63a974fe.js"
+    "static/js/main.e3d85c81.js"
   ]
 }
