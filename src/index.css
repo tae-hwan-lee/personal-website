@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Archivo Black', sans-serif;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+[theme='red'] {
+  --background: rgb(255 87 51);
+  --text-primary: rgb(255 255 255);
+}
+[theme='der'] {
+  --background: rgb(255 255 255);
+  --text-primary: rgb(255 87 51);
+}
+[theme='green'] {
+  --background: rgb(25 123 52);
+  --text-primary: rgb(255 255 255);
+}
+[theme='neerg'] {
+  --background: rgb(255 255 255);
+  --text-primary: rgb(25 123 52);
+}
+[theme='blue'] {
+  --background: rgb(0, 71, 171);
+  --text-primary: rgb(255 255 255);
+}
+[theme='eulb'] {
+  --background: rgb(255 255 255);
+  --text-primary: rgb(0, 71, 171);
+}
+[theme='dark'] {
+  --background: black;
+  --text-primary: white;
+}
+[theme='light'] {
+  --background: white;
+  --text-primary: black;
+}
