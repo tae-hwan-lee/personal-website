@@ -1,4 +1,30 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const BoingLink = ({ text, path, external }) => {
+  if (external) {
+    return (
+      <motion.div whileHover={{ y: -3 }} whileTap={{ y: 0 }}>
+        <a
+          href={path}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='no-underline text-sm sm:text-lg'
+        >
+          {text}
+        </a>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div whileHover={{ y: -3 }} whileTap={{ y: 0 }}>
+      <Link to={path} className='no-underline text-sm sm:text-lg'>
+        {text}
+      </Link>
+    </motion.div>
+  );
+};
 
 export const Header = () => {
   return (
@@ -8,50 +34,36 @@ export const Header = () => {
           <ul className='w-full flex justify-between border-b text-sm sm:text-lg mb-2'>
             <div className='flex gap-4 sm:gap-14'>
               <li className=''>
-                <Link to='/about' className='no-underline text-sm sm:text-lg'>
-                  ABOUT
-                </Link>
+                <BoingLink text='ABOUT' path='/about' />
               </li>
               <li>
-                <Link to='/about' className='no-underline text-sm sm:text-lg'>
-                  PROJECTS
-                </Link>
+                <BoingLink text='PROJECTS' path='/projects' />
               </li>
             </div>
             <div className='flex  gap-4 sm:gap-14'>
               <li className='self-end'>
-                <a
-                  href='https://www.linkedin.com/in/tae-hwan-lee/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='no-underline text-sm sm:text-lg'
-                >
-                  LINKEDIN
-                </a>
+                <BoingLink
+                  path='https://www.linkedin.com/in/tae-hwan-lee/'
+                  text='LINKEDIN'
+                  external
+                />
               </li>
               <li className='self-end mr-12'>
-                <a
-                  href='https://github.com/tae-hwan-lee'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='no-underline text-sm sm:text-lg'
-                >
-                  GITHUB
-                </a>
+                <BoingLink
+                  path='https://github.com/tae-hwan-lee'
+                  text='GITHUB'
+                  external
+                />
               </li>
             </div>
           </ul>
 
           <ul className='w-full flex gap-4 sm:gap-x-24 border-b-2'>
             <li>
-              <Link to='/about' className='no-underline text-sm sm:text-lg'>
-                HOROSCOPES
-              </Link>
+              <BoingLink text='HOROSCOPES' path='/about' />
             </li>
             <li>
-              <Link to='/random' className='no-underline text-sm sm:text-lg'>
-                MS ESCHER
-              </Link>
+              <BoingLink text='MS ESCHER' path='/random' />
             </li>
           </ul>
         </div>
