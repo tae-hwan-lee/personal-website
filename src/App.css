@@ -1,49 +1,16 @@
 body,
-html {
+html,
+.main-container {
   height: 100%;
   margin: 0;
 }
 
-body {
-  background-image: url('/src/images/underconstruction/construction.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #000; /* Or any other color you prefer */
+.dood {
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
 }
 
-.logos {
-  position: absolute;
-  right: 14vw;
-  height: 12vw;
-  width: auto;
-}
-
-#linked-in {
-  top: 50%;
-  transform: translateY(calc(-50% - 6vw));
-}
-
-#github {
-  top: 50%;
-  transform: translateY(calc(-50% + 6vw));
-}
-
-@media (max-width: 900px) {
-  .logos {
-    position: absolute;
-    right: 8vw;
-    height: 18vw;
-    width: auto;
-  }
-
-  #linked-in {
-    top: 50%;
-    transform: translateY(calc(-50% - 9vw));
-  }
-
-  #github {
-    top: 50%;
-    transform: translateY(calc(-50% + 9vw));
-  }
+textPath {
+  animation: slideText 10s linear infinite;
 }
