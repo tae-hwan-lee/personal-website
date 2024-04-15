@@ -20,24 +20,24 @@ export const Header = () => {
             </div>
             <div className='flex  gap-4 sm:gap-14'>
               <li className='self-end'>
-                <Link
+                <a
                   href='https://www.linkedin.com/in/tae-hwan-lee/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='no-underline text-sm sm:text-lg'
                 >
                   LINKEDIN
-                </Link>
+                </a>
               </li>
               <li className='self-end mr-12'>
-                <Link
+                <a
                   href='https://github.com/tae-hwan-lee'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='no-underline text-sm sm:text-lg'
                 >
                   GITHUB
-                </Link>
+                </a>
               </li>
             </div>
           </ul>
@@ -49,13 +49,15 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to='/about' className='no-underline text-sm sm:text-lg'>
+              <Link to='/random' className='no-underline text-sm sm:text-lg'>
                 MS ESCHER
               </Link>
             </li>
           </ul>
         </div>
-        <div className='w-2/5 text-7xl text-center mt-2'>TAE LEE</div>
+        <Link to='/' className='w-2/5 text-7xl text-center mt-2'>
+          TAE LEE
+        </Link>
       </nav>
     </header>
   );
