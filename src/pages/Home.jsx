@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import useThemeStore from '../utils/zustand/useThemeStore';
-import epicConsoleLogger from '../utils/epicConsoleLogger';
 import dood from '../images/dood.png';
 
 export const Home = () => {
@@ -28,10 +27,6 @@ export const Home = () => {
     window.addEventListener('resize', updateConstraints);
 
     return () => window.removeEventListener('resize', updateConstraints);
-  }, []);
-
-  useEffect(() => {
-    epicConsoleLogger();
   }, []);
 
   const handleThemeChange = () => {
