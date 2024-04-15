@@ -5,6 +5,7 @@ import './App.css';
 import useThemeStore from './utils/zustand/useThemeStore.js';
 import { Header } from './components/Header';
 import { Home } from './pages/home';
+import { Footer } from './components/Footer';
 
 function App() {
   const theme = useThemeStore((state) => state.theme);
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
