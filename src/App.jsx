@@ -22,7 +22,7 @@ function App() {
   }, [theme]);
 
   return (
-    <>
+    <div className='min-h-screen flex flex-col'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
         <Route path='/projects' element={<Projects />} />
       </Routes>
       <Footer></Footer>
-    </>
+    </div>
   );
 }
 

@@ -1,8 +1,12 @@
 body,
 html,
-.main-container {
+main {
   height: 100%;
   margin: 0;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .dood {

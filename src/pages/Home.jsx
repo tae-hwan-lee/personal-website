@@ -46,7 +46,7 @@ export const Home = () => {
   };
 
   return (
-    <div className='main-container'>
+    <main>
       <div
         id='intro'
         className='flex justify-center items-center h-almost-screen'
@@ -100,6 +100,6 @@ export const Home = () => {
           <p>mechanical engineering student</p>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
