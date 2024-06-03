@@ -5,6 +5,7 @@ import './App.css';
 import useThemeStore from './utils/zustand/useThemeStore.js';
 import { Header } from './components/Header';
 import { MCEscher } from './pages/MCEscher';
+import { Projects } from './pages/Projects';
 import { Home } from './pages/Home';
 import { Footer } from './components/Footer';
 import epicConsoleLogger from './utils/epicConsoleLogger.js';
@@ -16,15 +17,20 @@ function App() {
     epicConsoleLogger();
   }, []);
 
+  useEffect(() => {
+    document.body.setAttribute('theme', theme);
+  }, [theme]);
+
   return (
-    <div className='App' theme={theme}>
+    <>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/random' element={<MCEscher />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
       <Footer></Footer>
-    </div>
+    </>
   );
 }
 
