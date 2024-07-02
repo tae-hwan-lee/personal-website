@@ -18,3 +18,7 @@ main {
 textPath {
   animation: slideText 10s linear infinite;
 }
+
+.border-custom {
+  border: 6px solid var(--text-primary);
+}

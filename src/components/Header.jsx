@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const BoingLink = ({ text, path, external }) => {
+const BoingLink = ({ text, path, external, customTypography }) => {
+  const location = useLocation();
+  const isActive = location.pathname === path;
+
   if (external) {
     return (
       <motion.div whileHover={{ y: -3 }} whileTap={{ y: 0 }}>
@@ -18,8 +21,17 @@ const BoingLink = ({ text, path, external }) => {
   }
 
   return (
-    <motion.div whileHover={{ y: -3 }} whileTap={{ y: 0 }}>
-      <Link to={path} className='no-underline text-sm sm:text-lg'>
+    <motion.div
+      className={customTypography}
+      whileHover={{ y: -3 }}
+      whileTap={{ y: 0 }}
+    >
+      <Link
+        to={path}
+        className={`${
+          customTypography ? customTypography : 'text-sm sm:text-lg'
+        } ${isActive ? 'border-custom' : 'no-underline'}`}
+      >
         {text}
       </Link>
     </motion.div>
@@ -28,16 +40,13 @@ const BoingLink = ({ text, path, external }) => {
 
 export const Header = () => {
   return (
-    <header>
+    <header className='z-10 mt-4'>
       <nav className='flex'>
         <div className='w-3/5 ml-4 mt-2'>
           <ul className='w-full flex justify-between border-b text-sm sm:text-lg mb-2'>
             <div className='flex gap-4 sm:gap-14'>
               <li className=''>
                 <BoingLink text='ABOUT' path='/about' />
-              </li>
-              <li>
-                <BoingLink text='PROJECTS' path='/projects' />
               </li>
             </div>
             <div className='flex  gap-4 sm:gap-14'>
@@ -60,16 +69,18 @@ export const Header = () => {
 
           <ul className='w-full flex gap-4 sm:gap-x-24 border-b-2'>
             <li>
-              <BoingLink text='HOROSCOPES' path='/about' />
+              <BoingLink text='HOROSCOPES' path='/archie' />
             </li>
             <li>
               <BoingLink text='MS ESCHER' path='/random' />
             </li>
           </ul>
         </div>
-        <Link to='/' className='w-2/5 text-7xl text-center mt-2'>
-          TAE LEE
-        </Link>
+        <BoingLink
+          path='/'
+          text='TAE LEE'
+          customTypography='w-2/5 text-7xl text-center mt-2'
+        ></BoingLink>
       </nav>
     </header>
   );
