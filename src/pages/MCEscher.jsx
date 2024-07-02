@@ -19,7 +19,7 @@ export const MCEscher = () => {
       }
       offsetRef.current =
         (offsetRef.current + (speedFactor * deltaTime) / 10) % 100; // Normalize speed based on a 60Hz refresh rate
-      console.log(offsetRef.current);
+      // console.log(offsetRef.current);
 
       if (textPathRef.current) {
         textPathRef.current.setAttribute(
@@ -42,23 +42,25 @@ export const MCEscher = () => {
     //     d='M10,200 Q 200,20 200,200 T 490,100'
     //     ref={wavePathRef}
     //   />
-    <svg
-      width='518'
-      height='550'
-      viewBox='0 0 600 600'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
-      <path
-        id='wavePath'
-        d='M220.219 1H297.242L517 372.46M220.219 1L1 372.46L40.3194 446M220.219 1L400.119 297.846H325.251M517 372.46L480.912 446H40.3194M517 372.46H149.121L192.211 297.846M40.3194 446L220.219 128.22L255.451 185.119M192.211 297.846H325.251M192.211 297.846L255.451 185.119M325.251 297.846L255.451 185.119'
-        stroke='none'
-      />
-      <text fontSize='24' fill='#197B34'>
-        <textPath href='#wavePath' ref={textPathRef}>
-          {repeatText}
-        </textPath>
-      </text>
-    </svg>
+    <div className='flex flex-col items-center justify-center gap-8'>
+      <svg
+        width='518'
+        height='550'
+        viewBox='0 0 600 600'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          id='wavePath'
+          d='M220.219 1H297.242L517 372.46M220.219 1L1 372.46L40.3194 446M220.219 1L400.119 297.846H325.251M517 372.46L480.912 446H40.3194M517 372.46H149.121L192.211 297.846M40.3194 446L220.219 128.22L255.451 185.119M192.211 297.846H325.251M192.211 297.846L255.451 185.119M325.251 297.846L255.451 185.119'
+          stroke='none'
+        />
+        <text fontSize='24' fill='var(--text-primary)'>
+          <textPath href='#wavePath' ref={textPathRef}>
+            {repeatText}
+          </textPath>
+        </text>
+      </svg>
+    </div>
   );
 };
