@@ -5,7 +5,8 @@ import './App.css';
 import useThemeStore from './utils/zustand/useThemeStore.js';
 import { Header } from './components/Header';
 import { MCEscher } from './pages/MCEscher';
-import { Projects } from './pages/Projects';
+import { About } from './pages/About.jsx';
+import { Horoscopes } from './pages/Horoscopes';
 import { Home } from './pages/Home';
 import { Footer } from './components/Footer';
 import epicConsoleLogger from './utils/epicConsoleLogger.js';
@@ -22,12 +23,13 @@ function App() {
   }, [theme]);
 
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col justify-between'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/random' element={<MCEscher />} />
-        <Route path='/projects' element={<Projects />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/archie' element={<Horoscopes />} />
       </Routes>
       <Footer></Footer>
     </div>
