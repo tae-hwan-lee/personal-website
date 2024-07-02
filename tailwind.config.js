@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        'almost-screen': '90vh',
+        'almost-screen': '80vh',
       },
     },
     letterSpacing: {
