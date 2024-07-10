@@ -9,8 +9,6 @@ export const Horoscopes = () => {
   const options = { month: 'short', day: 'numeric', year: 'numeric' };
   const formattedDate = today.toLocaleDateString('en-US', options);
 
-  console.log(formattedDate); // e.g., "Dec 20, 2024"
-
   const dayOfYear = Math.floor(
     (today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24)
   );
