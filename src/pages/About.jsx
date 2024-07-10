@@ -38,7 +38,7 @@ const LazyLoadedImage = ({ src, alt }) => {
       <img
         src={path}
         alt={alt}
-        className={`h-36 ${isImageLoaded ? 'block' : 'hidden'}`}
+        className={`w-96 ${isImageLoaded ? 'block' : 'hidden'}`}
         onLoad={() => setImageLoaded(true)}
       />
     </div>
@@ -49,8 +49,11 @@ const ProjectsList = () =>
   Object.keys(staticText.projects).map((projectName) => {
     const project = projects[projectName];
     return (
-      <div key={project.key} className='flex items-end justify-between'>
-        <div>
+      <div
+        key={project.key}
+        className='flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4'
+      >
+        <div className='order-last lg:order-first'>
           <h2 className='text-xl'>{project.title}</h2>
           <div>{project.description}</div>
         </div>
@@ -64,8 +67,8 @@ const ProjectsList = () =>
 
 export const About = () => {
   return (
-    <main>
-      <div className='my-20 mx-48 flex flex-col gap-12'>
+    <main className='mx-12 sm:mx-48'>
+      <div className='my-20 flex flex-col gap-12'>
         <h1 className='text-3xl'>experiences</h1>
         <div>
           <p>✩ō͡≡o</p>
@@ -88,8 +91,8 @@ export const About = () => {
           <p>mechanical engineering student</p>
         </div>
       </div>
-      <div className='w-3/5 mx-48 border-b right-0'></div>
-      <div className='my-20 mx-48 flex flex-col gap-12'>
+      <div className='w-3/5 border-b right-0'></div>
+      <div className='my-20 flex flex-col gap-12'>
         <h1 className='text-3xl'>misc</h1>
         <div className='flex flex-col mr-12 gap-8'>
           <ProjectsList />

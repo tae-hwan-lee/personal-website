@@ -84,14 +84,14 @@ export const HamburgerHeader = () => {
   };
 
   return (
-    <header className='z-10 mt-4'>
+    <header className='z-10 mt-4 mx-4'>
       <nav className='flex items-center justify-between'>
         <BoingLink
           path='/'
           text='TAE LEE'
           customTypography='text-5xl sm:text-7xl text-center mt-2'
         />
-        <button className='block px-4 py-1' onClick={toggleMenu}>
+        <button className='block py-1' onClick={toggleMenu}>
           <Smile color='var(--text-primary)' size={48} />
         </button>
         <AnimatePresence>

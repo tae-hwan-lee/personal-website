@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export const MCEscher = () => {
+  const isMobile = useMediaQuery({ maxWidth: 890 });
   const textPathRef = useRef();
   const lastTimeRef = useRef(performance.now());
   const offsetRef = useRef(-34);
@@ -42,11 +44,11 @@ export const MCEscher = () => {
     //     d='M10,200 Q 200,20 200,200 T 490,100'
     //     ref={wavePathRef}
     //   />
-    <div className='flex flex-col items-center justify-center gap-8'>
+    <div className='flex flex-col items-center justify-center'>
       <svg
-        width='518'
+        width={isMobile ? '340' : '518'}
         height='550'
-        viewBox='0 0 600 600'
+        viewBox={isMobile ? '0 0 550 600' : '0 0 550 500'}
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
@@ -55,7 +57,7 @@ export const MCEscher = () => {
           d='M220.219 1H297.242L517 372.46M220.219 1L1 372.46L40.3194 446M220.219 1L400.119 297.846H325.251M517 372.46L480.912 446H40.3194M517 372.46H149.121L192.211 297.846M40.3194 446L220.219 128.22L255.451 185.119M192.211 297.846H325.251M192.211 297.846L255.451 185.119M325.251 297.846L255.451 185.119'
           stroke='none'
         />
-        <text fontSize='24' fill='var(--text-primary)'>
+        <text fontSize='36' fill='var(--text-primary)'>
           <textPath href='#wavePath' ref={textPathRef}>
             {repeatText}
           </textPath>
