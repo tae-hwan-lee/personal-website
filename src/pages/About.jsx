@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
+import { Github } from '../components/Github';
+import { LinkedIn } from '../components/LinkedIn';
 
 const staticText = {
   projects: {
@@ -97,6 +99,22 @@ export const About = () => {
         <div className='flex flex-col mr-12 gap-8'>
           <ProjectsList />
         </div>
+      </div>
+      <div className='flex justify-center gap-16 my-8'>
+        <a
+          href='https://github.com/tae-hwan-lee'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Github fillColor='var(--text-primary)' className='w-16' />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/tae-hwan-lee/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <LinkedIn fillColor='var(--text-primary)' className='w-16' />
+        </a>
       </div>
     </main>
   );
