@@ -4,9 +4,9 @@ export const LinkedIn = ({ fillColor, className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     className={className}
-    stroke-linejoin='round'
-    stroke-linecap='round'
-    stroke-width='2'
+    strokeLinejoin='round'
+    strokeLinecap='round'
+    strokeWidth='2'
     stroke={fillColor}
     fill='none'
     viewBox='0 0 32 32'
@@ -22,7 +22,7 @@ export const LinkedIn = ({ fillColor, className }) => (
         <circle id='svg_3' r='2' cy='8.5' cx='8' />
       </g>
       <rect
-        stroke-width='4'
+        strokeWidth='4'
         id='svg_5'
         height='32'
         width='32'

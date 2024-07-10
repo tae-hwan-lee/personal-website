@@ -52,7 +52,7 @@ const ProjectsList = () =>
     const project = projects[projectName];
     return (
       <div
-        key={project.key}
+        key={project.title}
         className='flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4'
       >
         <div className='order-last lg:order-first'>
@@ -61,7 +61,7 @@ const ProjectsList = () =>
         </div>
         <LazyLoadedImage
           src={project.image}
-          alt={project.key}
+          alt={project.title}
         ></LazyLoadedImage>
       </div>
     );
