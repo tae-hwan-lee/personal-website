@@ -140,7 +140,7 @@ export const HamburgerHeader = () => {
                   </li>
                   <li>
                     <BoingLink
-                      text='MS ESCHER'
+                      text='MC ESCHER'
                       path='/random'
                       onClick={toggleMenu}
                     />
