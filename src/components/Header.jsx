@@ -108,7 +108,7 @@ export const Header = () => {
               <BoingLink text='HOROSCOPES' path='/archie' />
             </li>
             <li>
-              <BoingLink text='MS ESCHER' path='/random' />
+              <BoingLink text='MC ESCHER' path='/random' />
             </li>
           </ul>
         </div>
